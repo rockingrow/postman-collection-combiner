@@ -1,0 +1,899 @@
+{
+  "info": {
+    "_postman_id": "3559d8c3-a529-41f7-ac89-a79a310a8b2f",
+    "name": "Webs sub",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Frontend",
+      "item": [
+        {
+          "name": "Register",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "name": "Content-Type",
+                "type": "text",
+                "value": "application/javascript"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\t\"userName\": \"user1\",\n\t\"email\": \"user1@gmail.com\",\n\t\"password\": \"user1@pass\"\n}",
+              "options": {
+                "raw": {
+                  "language": "javascript"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/api/register",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Backend",
+      "item": [
+        {
+          "name": "Auth",
+          "item": [
+            {
+              "name": "Register",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/javascript",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"userName\": \"administrator\",\n\t\"email\": \"administrator@webs.com\",\n\t\"password\": \"admin@1\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/register",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "register"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Login",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      "response = JSON.parse(responseBody);"
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n\t\"userName\": \"team\",\n\t\"email\": \"team@gmail.com\",\n\t\"password\": \"team@pass\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/login",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "login"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Login",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n\t\"userName\": \"team\",\n\t\"email\": \"team@gmail.com\",\n\t\"password\": \"team@pass\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/api/login",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "X-DNS-Prefetch-Control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "X-Download-Options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "Surrogate-Control",
+                      "value": "no-store"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "26020"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"65a4-CyqflTz6/fBBH8EIwK+hUHNUZB8\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Tue, 23 Jun 2020 15:35:23 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": ""
+                },
+                {
+                  "name": "Login",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [
+                      {
+                        "key": "Content-Type",
+                        "name": "Content-Type",
+                        "value": "application/json",
+                        "type": "text"
+                      }
+                    ],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/api/login",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "login"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "X-DNS-Prefetch-Control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "X-Download-Options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "Surrogate-Control",
+                      "value": "no-store"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "set-cookie",
+                      "value": "Max-Age=604800; Domain=localhost; Path=/; Expires=Wed, 01 Jul 2020 19:21:05 GMT; HttpOnly"
+                    },
+                    {
+                      "key": "set-cookie",
+                      "value": "sails.sid=; Path=/; HttpOnly"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "30969"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"78f9-2jueM3T1GZ2BrMsqVXdbW4s+ncg\""
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Wed, 24 Jun 2020 19:21:05 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": ""
+                }
+              ]
+            },
+            {
+              "name": "Logout",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "exec": [
+                      ""
+                    ],
+                    "type": "text/javascript"
+                  }
+                }
+              ],
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{webs_api_token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "name": "Content-Type",
+                    "type": "text",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/logout",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "logout"
+                  ]
+                }
+              },
+              "response": []
+            }
+          ]
+        },
+        {
+          "name": "Project",
+          "item": [
+            {
+              "name": "Get Projects",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{webs_api_token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/api/projects",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "projects"
+                  ]
+                }
+              },
+              "response": []
+            },
+            {
+              "name": "Get Project By Name",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{webs_api_token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "{{url}}/api/project?project_name=DevProject",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "project"
+                  ],
+                  "query": [
+                    {
+                      "key": "project_name",
+                      "value": "DevProject"
+                    }
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Get Project By Name no includes path",
+                  "originalRequest": {
+                    "method": "GET",
+                    "header": [],
+                    "url": {
+                      "raw": "{{url}}/api/project?project_name=DevProject",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "project"
+                      ],
+                      "query": [
+                        {
+                          "key": "project_name",
+                          "value": "DevProject"
+                        },
+                        {
+                          "key": "projectSigmaId",
+                          "value": null,
+                          "disabled": true
+                        }
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "X-DNS-Prefetch-Control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "X-Download-Options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "Surrogate-Control",
+                      "value": "no-store"
+                    },
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "4612"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"1204-cRBhy7S5SYj+wNne69d51IHraTk\""
+                    },
+                    {
+                      "key": "Set-Cookie",
+                      "value": "sails.sid=s%3AxzWAKakP0cSsID9qGz0fm8uXQfQRzx33.TvpTotAjaSmqaesuTSX9WUqP77JMaqIf5Fc2lURMr7c; Path=/; HttpOnly"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Thu, 19 Nov 2020 06:28:50 GMT"
+                    },
+                    {
+                      "key": "Connection",
+                      "value": "keep-alive"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"project\": {\n        \"id\": \"7b594eba-4273-437f-9334-444da056247d\",\n        \"name\": \"DevProject\",\n        \"description\": \"The ultra low sulfur refinery employing the newest available technologies and processes to ensure ACME the leading position in the industry.\",\n        \"program_id_fk\": \"9b033c7c-6368-4992-b72f-7ae25d705996\",\n        \"project_type_id_fk\": null,\n        \"idx_project\": 65,\n        \"attributes\": [\n            {\n                \"id\": \"b1dd04b5-22f3-480d-9247-585b8da09d12\",\n                \"name\": \"project_disciplines\",\n                \"description\": null,\n                \"project_att_type\": null,\n                \"std\": \"disciplines\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"581e3c7e-8551-47d0-b3d9-84e5ff5eb665\",\n                \"project_data_value\": \"{\\\"discipline\\\":[{\\\"name\\\":\\\"Civil/Structural\\\",\\\"code\\\":\\\"CS\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Civil Works\\\",\\\"code\\\":\\\"CC\\\"},{\\\"name\\\":\\\"Civil Pilings\\\",\\\"code\\\":\\\"CP\\\"},{\\\"name\\\":\\\"Structural Steel\\\",\\\"code\\\":\\\"SS\\\"}]},{\\\"name\\\":\\\"Electrical\\\",\\\"code\\\":\\\"EL\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Electrical\\\",\\\"code\\\":\\\"EL\\\"}]},{\\\"name\\\":\\\"Instrumentation & Controls\\\",\\\"code\\\":\\\"IT\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Instrumentation\\\",\\\"code\\\":\\\"IT\\\"}]},{\\\"name\\\":\\\"Piping\\\",\\\"code\\\":\\\"PI\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Above Ground Piping\\\",\\\"code\\\":\\\"AP\\\"},{\\\"name\\\":\\\"Under Ground Piping\\\",\\\"code\\\":\\\"UP\\\"}]},{\\\"name\\\":\\\"Scaffolding\\\",\\\"code\\\":\\\"SC\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Scaffolding\\\",\\\"code\\\":\\\"SC\\\"}]},{\\\"name\\\":\\\"Speciality\\\",\\\"code\\\":\\\"SP\\\",\\\"cwpTypes\\\":[{\\\"name\\\":\\\"Demolition\\\",\\\"code\\\":\\\"DE\\\"},{\\\"name\\\":\\\"Painting\\\",\\\"code\\\":\\\"PA\\\"},{\\\"name\\\":\\\"Insulation\\\",\\\"code\\\":\\\"IN\\\"}]}]}\",\n                \"project_att_id_fk\": \"b1dd04b5-22f3-480d-9247-585b8da09d12\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            },\n            {\n                \"id\": \"1f5bd1f8-4f6f-44e5-a07e-bcf12b38aa0d\",\n                \"name\": \"project_code\",\n                \"description\": \"Store code of project this value can not dupplicated\",\n                \"project_att_type\": null,\n                \"std\": \"code\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"bf36b594-33f5-4946-a70b-2b13d12dd83c\",\n                \"project_data_value\": \"DevProject\",\n                \"project_att_id_fk\": \"1f5bd1f8-4f6f-44e5-a07e-bcf12b38aa0d\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            },\n            {\n                \"id\": \"e2c5c69d-7538-42ce-8ace-8118f3fbb3f9\",\n                \"name\": \"project_svgplotplan_data\",\n                \"description\": \"Store svg-related information such as viewBox, image\",\n                \"project_att_type\": null,\n                \"std\": \"svgplotplan_data\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"2aa1f5c6-d260-4d17-b51f-777bb59cec67\",\n                \"project_data_value\": \"{\\\"viewBox\\\":\\\"0 0 33867 19050\\\",\\\"image\\\":{\\\"x\\\":\\\"79\\\",\\\"y\\\":\\\"363\\\",\\\"width\\\":\\\"33682\\\",\\\"height\\\":\\\"18146\\\",\\\"src\\\":\\\"\\\"}}\",\n                \"project_att_id_fk\": \"e2c5c69d-7538-42ce-8ace-8118f3fbb3f9\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            },\n            {\n                \"id\": \"4f4eb6e6-a0d0-4267-b78a-d7777e4b472d\",\n                \"name\": \"project_document_id\",\n                \"description\": \"The \\\"urn\\\" information of 3D model in Autodesk Forge\",\n                \"project_att_type\": null,\n                \"std\": \"document_id\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"e86cca68-dd3c-47eb-97e8-9c2d48f611ae\",\n                \"project_data_value\": \"urn:dXJuOmFkc2sub2JqZWN0czpvcy5vYmplY3Q6M2R2aWV3ZXJidWNrZXQvQW5vdGhlciUyME1vZGVsLm53ZA\",\n                \"project_att_id_fk\": \"4f4eb6e6-a0d0-4267-b78a-d7777e4b472d\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            },\n            {\n                \"id\": \"fefd1280-401e-46da-b409-b93d0d31bdca\",\n                \"name\": \"project_plot_plan\",\n                \"description\": \"Location to project plot plan\",\n                \"project_att_type\": null,\n                \"std\": \"plot_plan\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"43eb3c7b-fa08-4798-8cdb-7402e20a3a14\",\n                \"project_data_value\": \"DevProject/DevProject plot-plan.png\",\n                \"project_att_id_fk\": \"fefd1280-401e-46da-b409-b93d0d31bdca\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            },\n            {\n                \"id\": \"47fcd74d-732c-4505-b861-3d7d59ea9bfc\",\n                \"name\": \"project_image\",\n                \"description\": \"Location to project picture which is using to display in Dashboard\",\n                \"project_att_type\": null,\n                \"std\": \"image\",\n                \"project_type_id_fk\": null,\n                \"project_data_id\": \"83095a91-2282-4880-8afb-b9830d0daaa0\",\n                \"project_data_value\": \"DevProject/BGR Project Picture.jpeg\",\n                \"project_att_id_fk\": \"47fcd74d-732c-4505-b861-3d7d59ea9bfc\",\n                \"project_id_fk\": \"7b594eba-4273-437f-9334-444da056247d\"\n            }\n        ]\n    }\n}"
+                }
+              ]
+            },
+            {
+              "name": "Delete Project",
+              "request": {
+                "auth": {
+                  "type": "bearer",
+                  "bearer": [
+                    {
+                      "key": "token",
+                      "value": "{{webs_api_token}}",
+                      "type": "string"
+                    }
+                  ]
+                },
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"project_id\": \"project id\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{url}}/api/delete_project",
+                  "host": [
+                    "{{url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "delete_project"
+                  ]
+                }
+              },
+              "response": [
+                {
+                  "name": "Delete Project",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"project_id\": \"project id\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/api/delete_project",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "delete_project"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "109"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"6d-O6JCiA8kGnnnPsH8cLBVfTNOlT4\""
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "X-DNS-Prefetch-Control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "X-Download-Options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "Surrogate-Control",
+                      "value": "no-store"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ARR/3.0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Fri, 25 Sep 2020 17:57:45 GMT"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Delete project done\",\n    \"process_log\": \"Delete project: Fail to get project path \"\n}"
+                },
+                {
+                  "name": "Delete Project - success",
+                  "originalRequest": {
+                    "method": "POST",
+                    "header": [],
+                    "body": {
+                      "mode": "raw",
+                      "raw": "{\n    \"project_id\": \"project id\"\n}",
+                      "options": {
+                        "raw": {
+                          "language": "json"
+                        }
+                      }
+                    },
+                    "url": {
+                      "raw": "{{url}}/api/delete_project",
+                      "host": [
+                        "{{url}}"
+                      ],
+                      "path": [
+                        "api",
+                        "delete_project"
+                      ]
+                    }
+                  },
+                  "status": "OK",
+                  "code": 200,
+                  "_postman_previewlanguage": "json",
+                  "header": [
+                    {
+                      "key": "Cache-Control",
+                      "value": "no-store, no-cache, must-revalidate, proxy-revalidate"
+                    },
+                    {
+                      "key": "Pragma",
+                      "value": "no-cache"
+                    },
+                    {
+                      "key": "Content-Length",
+                      "value": "44"
+                    },
+                    {
+                      "key": "Content-Type",
+                      "value": "application/json; charset=utf-8"
+                    },
+                    {
+                      "key": "Expires",
+                      "value": "0"
+                    },
+                    {
+                      "key": "ETag",
+                      "value": "W/\"2c-pqmD/OXO5WUq1hPMYHGHYv8qOqc\""
+                    },
+                    {
+                      "key": "Vary",
+                      "value": "Accept-Encoding"
+                    },
+                    {
+                      "key": "X-DNS-Prefetch-Control",
+                      "value": "off"
+                    },
+                    {
+                      "key": "X-Frame-Options",
+                      "value": "SAMEORIGIN"
+                    },
+                    {
+                      "key": "Strict-Transport-Security",
+                      "value": "max-age=31536000; includeSubDomains"
+                    },
+                    {
+                      "key": "X-Download-Options",
+                      "value": "noopen"
+                    },
+                    {
+                      "key": "X-Content-Type-Options",
+                      "value": "nosniff"
+                    },
+                    {
+                      "key": "X-XSS-Protection",
+                      "value": "1; mode=block"
+                    },
+                    {
+                      "key": "Surrogate-Control",
+                      "value": "no-store"
+                    },
+                    {
+                      "key": "X-Powered-By",
+                      "value": "ARR/3.0"
+                    },
+                    {
+                      "key": "Date",
+                      "value": "Sat, 18 Jul 2020 16:08:56 GMT"
+                    }
+                  ],
+                  "cookie": [],
+                  "body": "{\n    \"message\": \"Delete project done\",\n    \"error\": \"\"\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TEST",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{webs_api_token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "projectId",
+                "value": "{{project_id}}",
+                "description": "",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{url}}/api/test_api?project_id=projectid1",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "api",
+                "wps"
+              ],
+              "query": [
+                {
+                  "key": "project_id",
+                  "value": "project id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "description": "This is description",
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{webs_api_token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "var Header = require('postman-collection').Header",
+          "pm.request.headers.add(new Header(\"idtoken: \" + pm.collectionVariables.get(\"idtoken\") ))"
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "idtoken",
+      "value": "idtokenexample"
+    }
+  ]
+}

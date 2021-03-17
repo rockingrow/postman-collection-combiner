@@ -1,0 +1,33 @@
+{
+  "name": "postman-collection-combiner",
+  "version": "1.0.0",
+  "description": "PCM be a tool to help the user to merge 2 postman collections",
+  "main": "./src/js/combine.js",
+  "scripts": {
+    "combine": "node ./scripts/combine.js",
+    "combine:dev": "npm run combine -- --main=../json/main.postman_collection.json --sub=../json/sub.postman_collection.json",
+    "build": "babel src -d dist/$npm_package_version",
+    "build:dev": "babel --watch src -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rockingrow/postman-collection-combiner.git"
+  },
+  "author": "Quang Huynh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rockingrow/postman-collection-combiner/issues"
+  },
+  "homepage": "https://github.com/rockingrow/postman-collection-combiner#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.13.9",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/node": "^7.13.0",
+    "@babel/plugin-transform-runtime": "^7.13.9",
+    "@babel/preset-env": "^7.13.9"
+  }
+}
